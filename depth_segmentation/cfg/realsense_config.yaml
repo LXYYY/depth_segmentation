@@ -13,7 +13,7 @@ label_display: true
 label_inpaint_method: 0
 label_method: 1
 label_min_size: 500
-label_use_inpaint: false
+label_use_inpaint: true
 max_distance_display: false
 max_distance_exclude_nan_as_max_distance: false
 max_distance_ignore_nan_coordinates: false
@@ -38,4 +38,4 @@ normals_display: false
 normals_distance_factor_threshold: 0.05
 normals_method: 3
 normals_window_size: 13
-visualize_segmented_scene: false
+visualize_segmented_scene: true
