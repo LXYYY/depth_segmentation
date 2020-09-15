@@ -115,7 +115,7 @@ class DepthSegmentationNode {
           boost::bind(&DepthSegmentationNode::imageCallback, this, _1, _2));
     }
 
-    node_handle_.param<bool>("load_camera_info_from_ros_param_",
+    node_handle_.param<bool>("load_camera_info_from_ros_param",
                              load_camera_info_from_ros_param_,
                              load_camera_info_from_ros_param_);
     if (!loadCameraInfoFromRosParam()) {
@@ -169,7 +169,7 @@ class DepthSegmentationNode {
       sensor_msgs::CameraInfo, sensor_msgs::CameraInfo>
       CameraInfoSyncPolicy;
 
-  bool load_camera_info_from_ros_param_;
+  bool load_camera_info_from_ros_param_ = false;
   bool camera_info_ready_;
   depth_segmentation::DepthCamera depth_camera_;
   depth_segmentation::RgbCamera rgb_camera_;

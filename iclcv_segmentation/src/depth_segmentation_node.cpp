@@ -434,7 +434,8 @@ void run() {
     }
     // Throw away segments that are too flat or thin, as they will merge with
     // all flat/thin segments.
-    pcl::PCA<PointType> pca(*segmented_point_cloud_pcl);
+    pcl::PCA<PointType> pca;
+    pca.setInputCloud(segmented_point_cloud_pcl);
     Eigen::VectorXf eigen_values = pca.getEigenValues();
     if (filter_thin_elements &&
         eigen_values.minCoeff() <

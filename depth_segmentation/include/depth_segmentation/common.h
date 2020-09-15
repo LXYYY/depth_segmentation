@@ -108,7 +108,7 @@ struct LabelMapParams {
 };
 
 struct SemanticInstanceSegmentationParams {
-  bool enable = false;
+  bool enable = true;
   float overlap_threshold = 0.8f;
 };
 
